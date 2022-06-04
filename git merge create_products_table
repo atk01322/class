@@ -1,0 +1,17 @@
+[33mcommit 9314bf540fc9cc7f9d04938e071b1069f110e911[m[33m ([m[1;36mHEAD -> [m[1;32mcreate_products_table[m[33m)[m
+Author: atsuki <atk01322@gmail.com>
+Date:   Sat May 28 14:39:09 2022 +0000
+
+    04 create products table
+
+[33mcommit ce83b067273019c6c1a5404e890ba082ab213c5d[m[33m ([m[1;32mmaster[m[33m)[m
+Author: atsuki <atk01322@gmail.com>
+Date:   Sat May 28 14:12:13 2022 +0000
+
+    03 create categories table
+
+[33mcommit 083076e9c714f83bb2dea630dca09a4319f02f57[m
+Author: EC2 Default User <ec2-user@ip-172-31-31-168.ap-northeast-1.compute.internal>
+Date:   Sat May 21 09:37:31 2022 +0000
+
+    first commit
