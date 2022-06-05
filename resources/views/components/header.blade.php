@@ -2,7 +2,7 @@
 
     <a class="navbar-brand ml-4" href="{{ url('/') }}">
 
-        {{ config('app.name', 'Laravel') }}
+        <img src="{{asset('img/logo.jpg')}}">
 
     </a>
 
