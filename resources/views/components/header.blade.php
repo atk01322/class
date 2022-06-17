@@ -1,10 +1,26 @@
-<nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+<nav class="navbar navbar-expand-md navbar-light shadow-sm samazon-header-container">
 
-    <a class="navbar-brand ml-4" href="{{ url('/') }}">
+    <a class="navbar-brand" href="{{ url('/') }}">
 
         <img src="{{asset('img/logo.jpg')}}">
 
     </a>
+
+    <form class="form-inline">
+
+        <div class="form-group">
+
+            <input class="form-control samazon-header-search-input">
+
+        </div>
+
+        <div class="input-group">
+
+            <button type="submit" class="btn samazon-header-search-button"><i class="fas fa-search samazon-header-search-icon"></i></button>
+
+        </div>
+
+    </form>
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
 
@@ -17,57 +33,68 @@
 
         <!-- Right Side Of Navbar -->
 
-        <ul class="navbar-nav ml-auto mr-5">
+        <ul class="navbar-nav ml-auto mr-5 mt-2">
 
             <!-- Authentication Links -->
 
             @guest
 
-            <li class="nav-item">
+            <li class="nav-item mr-5">
 
-                <a class="nav-link" href="{{ route('register') }}">新規登録</a>
+                <a class="nav-link" href="{{ route('register') }}"><label>新規登録</label></a>
 
             </li>
 
-            <li class="nav-item">
+            <li class="nav-item mr-5">
 
-                <a class="nav-link" href="{{ route('login') }}">ログイン</a>
+                <a class="nav-link" href="{{ route('login') }}"><label>ログイン</label></a>
+
+            </li>
+
+            <hr>
+
+            <li class="nav-item mr-5">
+
+                <a class="nav-link" href="{{ route('login') }}"><i class="far fa-heart"></i></a>
+
+            </li>
+
+            <li class="nav-item mr-5">
+
+                <a class="nav-link" href="{{ route('login') }}"><i class="fas fa-shopping-cart"></i></a>
 
             </li>
 
             @else
 
-            <li class="nav-item dropdown">
+             <li class="nav-item mr-5">
 
-                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                 <a class="nav-link" href="{{ route('mypage') }}">
 
-                    {{ Auth::user()->name }} <span class="caret"></span>
+                     <i class="fas fa-user mr-1"></i><label>マイページ</label>
 
-                </a>
+                 </a>
 
+             </li>
+              <li class="nav-item mr-5">
 
-                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                 <a class="nav-link" href="{{ route('mypage.favorite') }}">
 
-                    <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+                     <i class="far fa-heart"></i>
 
-                                            document.getElementById('logout-form').submit();">
+                 </a>
 
-                        {{ __('Logout') }}
+             </li>
+             <li class="nav-item mr-5">
 
-                    </a>
+                 <a class="nav-link" href="{{ route('carts.index') }}">
 
+                     <i class="fas fa-shopping-cart"></i>
 
-                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                 </a>
 
-                        @csrf
-
-                    </form>
-
-                </div>
-
-            </li>
-
-            @endguest
+             </li>
+             @endguest
 
         </ul>
 

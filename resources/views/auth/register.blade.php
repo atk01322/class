@@ -110,6 +110,19 @@
                     </div>
 
                 </div>
+                
+                <div class="form-group row">
+
+                    <label for="password" class="col-md-5 col-form-label text-md-left">年齢<span class="ml-1 samazon-require-input-label"><span class="samazon-require-input-label-text">必須</span></span></label>
+
+
+                    <div class="col-md-7">
+
+                        <input type="text" class="form-control @error('age') is-invalid @enderror samazon-login-input" name="age" required placeholder="21">
+
+                    </div>
+
+                </div>
 
 
                 <div class="form-group row">
